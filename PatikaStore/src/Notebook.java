@@ -88,6 +88,7 @@ public class Notebook extends Product implements Operations{
             System.out.print("Ürünün markasını giriniz: ");
             String newBrand = stringScanner.nextLine();
 
+
             System.out.print("Ürünün depolama alanını giriniz: ");
             String newStorage = stringScanner.nextLine();
 
@@ -108,10 +109,10 @@ public class Notebook extends Product implements Operations{
             notebookList.add(new Notebook(newId, newName, newPrice, newDiscountRate, newStock, newBrand, newScreen, newRam, newStorage ));
             System.out.println("Ürün eklenmiştir...");
             System.out.println();
+
         } else {
             System.out.println("Bu Id numarası daha önce kullanılmıştır. Tekrar deneyiniz.");
         }
-
     }
 
     @java.lang.Override
@@ -186,4 +187,3 @@ public class Notebook extends Product implements Operations{
                 item.getDiscountRate());
     }
 }
-
