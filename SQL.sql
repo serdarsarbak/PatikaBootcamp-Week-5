@@ -16,4 +16,10 @@ SELECT * FROM country WHERE LENGTH(country) >= 6 AND country LIKE '%n';
 SELECT * FROM film WHERE title ILIKE '%t%';
 SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
 
+--HM4
+SELECT DISTINCT replacement_cost FROM film;
+SELECT COUNT (DISTINCT replacement_cost) from film;
+SELECT COUNT (*) FROM film WHERE title LIKE 'T%' AND rating = 'G'; 
+SELECT COUNT (*) FROM country WHERE LENGTH(country)=5;
+SELECT COUNT (*) FROM city WHERE city ='%r';
 
