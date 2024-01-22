@@ -107,7 +107,6 @@ DELETE FROM employee WHERE id = 7;
 DELETE FROM employee WHERE id = 12;
 
 --HW9
-
 SELECT city, country FROM country
   INNER JOIN city ON city.country_id = country.country_id;
 
@@ -116,6 +115,13 @@ SELECT payment_id, first_name, last_name FROM customer
 
 SELECT rental_id, first_name, last_name FROM customer
   INNER JOIN rental ON rental.customer_id = customer.customer_id;
+
+--HW10
+SELECT city.city, country.country FROM CITY LEFT JOIN COUNTRY ON city.country_id = country.country_id;
+
+SELECT payment.payment_id, customer.first_name, customer.last_name FROM customer RIGHT JOIN payment ON payment.customer_id = customer.customer_id;
+
+SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer FULL JOIN rental ON customer.customer_id = rental.customer_id;
 
 
 
