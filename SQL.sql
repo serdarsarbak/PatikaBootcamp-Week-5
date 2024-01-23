@@ -134,6 +134,16 @@ SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer F
 (SELECT first_name FROM actor) INTERSECT ALL (SELECT first_name FROM customer);
 (SELECT first_name FROM actor) EXCEPT ALL (SELECT first_name FROM customer);
 
+--HW12
+SELECT COUNT(*) FROM film WHERE length > (SELECT AVG(length) FROM film);
+
+SELECT COUNT(*) FROM film WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+
+SELECT * FROM film WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND replacement_cost = (SELECT MIN(replacement_cost) from film);
+
+SELECT customer_id, COUNT(amount) FROM payment GROUP BY customer_id ORDER BY COUNT(amount) DESC;
+
+
 
 
 
